@@ -5,11 +5,9 @@ export const EducationPage = () => {
   return (
     <section className='education__container'>
 
-      <div className='education__h1'>
-        <h1>My Studies</h1>
-      </div>
-      
-      <article className='education__container__son'>
+      <h2>My Studies</h2>
+
+      <article className='container__son'>
 
         <div className='education__container__grid'>
 

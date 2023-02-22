@@ -21,7 +21,7 @@ export const LoginPage = () => {
           <h2> Pablo Gonzalez</h2>
           <button
             onClick={onLogin}>
-            click me
+            LOGIN
           </button>
         </div>
       </section>

@@ -10,7 +10,7 @@ import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { faFolderClosed } from "@fortawesome/free-regular-svg-icons";
 
 import '../../../styles.css';
-import { AboutPage } from "../../../components/pages";
+// import { AboutPage } from "../../../components/pages";
 
 
 
@@ -45,12 +45,13 @@ export const Navbar = () => {
                 <FontAwesomeIcon icon={faLaptopCode} />
             </NavLink>
 
-          {/*   <NavLink
+            {/*   <NavLink
                 className={({ isActive }) => `nav-item nav-link ${isActive ? 'active' : ''}`}
                 to="/services" >
                 <FontAwesomeIcon icon={faComputerMouse} />
             </NavLink>
- */}
+             */}
+
             <NavLink
                 className={({ isActive }) => `nav-item nav-link ${isActive ? 'active' : ''}`}
                 to="/projects" >

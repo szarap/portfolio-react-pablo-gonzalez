@@ -7,13 +7,12 @@ export const AboutPage = () => {
   return (
     <section className='about' >
 
-      <div className="about__container">
-
-        
-
+      <div className="about__container">  
+      
         <div className="about__content">
 
           <div className="about__cards">
+            
             <article className='education__article'>
               <Link to="/education" className="about__card">
                 <h2>Education</h2>  

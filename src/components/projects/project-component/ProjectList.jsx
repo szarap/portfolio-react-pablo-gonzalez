@@ -9,23 +9,24 @@ export const ProjectList = ({ owner }) => {
 
     return (
         <>
-            <div className='education__h1'>
-                <h1>My Projects</h1>
-            </div>
+            <div className="projects__container">
+                <h2>My Projects</h2>
+                <article className="project__son">  
+                    <div className="card__grid">
 
-            <div className="card__grid">
-
-                {
-                    projects.map(project => (
+                        {
+                            projects.map(project => (
 
 
-                        <ProjectCard
-                            key={project.id}
-                            {...project}
-                        />
+                                <ProjectCard
+                                    key={project.id}
+                                    {...project}
+                                />
 
-                    ))
-                }
+                            ))
+                        }
+                    </div>
+                </article>
             </div>
 
         </>

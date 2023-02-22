@@ -12,8 +12,8 @@ export const SocialPage = () => {
 
     return (
         <>
-        <div  className='container__wrap'>
-            <div className="header__social__container">
+        <div  className='header__social__container'>
+            <div className="social__container">
                 <Link to="https://www.linkedin.com/in/pablo-emanuel-gonzalez/" target="_blank"><BsLinkedin/></Link>
                 <Link to="https://github.com/szarap" target="_blank"><BsGithub/></Link>
                 <Link to="https://app.netlify.com/teams/szarap/overview" target="_blank"><SiNetlify/></Link>

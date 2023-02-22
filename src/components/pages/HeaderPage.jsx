@@ -60,42 +60,44 @@ export const HeaderPage = () => {
     <>
     
     <header>
-      
-      <div className='img__logo'>
-        <img src="../assets/logo.svg" alt="logo" />
-      </div>
+        <section className='header__son'>
 
-      <button className='header__logout'
-        onClick={onLogout}>
-        Logout
-      </button>
-
-      <section className='photo__container'>
-        <div className='photo__content'>
-          <div className='photo__content__first'>
-            <h3>Hi I'm </h3>
-            <h1>Pablo Gonzalez </h1>
+          <div className='img__logo'>
+            <img src="../assets/logo.svg" alt="logo" />
           </div>
-          <h2 className='header__wrap'><span>{text}</span></h2>
-        </div>
 
-        <div className='header__text_container'>
-          <div className='header__text'>
-            <p >I am a Frontend Developer looking for my first IT work experience.</p>
-            <p>It was during the pandemic that decided to push my career as a web developer furthermore. This path has taken me 2 years
-              within different technologies of Frontend and Backend.</p>
-            <p> I have worked on projects on my own, and continue to doing it. However, I am looking forward to fully dedicate myself
-              to work in this industry as part of a team and I'm excited to learn new skills and develop my professional career in a
-              Full Stack profile.</p>
-            <span>Thank you to visit my profile.</span>
-          </div>         
-        </div>
-          <DownloadPage />
+          <button className='header__logout'
+            onClick={onLogout}>
+            Logout
+          </button>
 
-      </section>
+          <section className='header__container'>
+            <div className='header__content'>
+              <div className='header__content__fs'>
+                <h1>Hi I'm Pablo Gonzalez </h1>
+              </div>
+              <h2 className='header__wrap'><span>{text}</span></h2>
+            </div>
 
-      <SocialPage className='container__wrap' />
-            
+            <div className='header__text_container'>
+              <div className='header__text'>
+                <p >I am a Frontend Developer looking for my first IT work experience.</p>
+                <p>It was during the pandemic that decided to push my career as a web developer furthermore. This path has taken me 2 years
+                  within different technologies of Frontend and Backend.</p>
+                <p> I have worked on projects on my own, and continue to doing it. However, I am looking forward to fully dedicate myself
+                  to work in this industry as part of a team and I'm excited to learn new skills and develop my professional career in a
+                  Full Stack profile.</p>
+                <span>Thank you to visit my profile.</span>
+              </div>
+            </div>
+            <DownloadPage />
+            <SocialPage className='container__wrap' />
+
+          </section>
+
+          {/* <SocialPage className='container__wrap' /> */}
+
+        </section>
     </header>
       <AboutPage />
       <ProjectsPage />

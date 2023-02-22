@@ -52,7 +52,7 @@ export const projects = [
         'name':'Heroes React App', 
         'owner':'Pablo Gonzalez', 
         'date':'2023-01-30',
-        'link': 'https://heroes-reactapp.netlify.app/login',
+        'link': 'https://heroes-reactapp.netlify.app',
         'github':'https://github.com/szarap/heroesReact-pablo-gonzalez',
         'description':'Spa to search between heroes in different categories, with a simple login to create public and privates routes',
         'technologies': 'React, JavaScript, css, bootstrap',

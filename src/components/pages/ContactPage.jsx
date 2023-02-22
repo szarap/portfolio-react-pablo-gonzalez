@@ -1,105 +1,155 @@
-import { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../../../assets/img_contact.svg";
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
 
+import 'animate.css';
+import { useForm } from "../../hooks/useForm";
+// import { Loader } from "../helpers/loader";
+// import { Message } from "../helpers/message";
+
+
+
+
+const initialForm = {
+  name: '',
+  lastName: '',
+  email: '',
+  subject: '',
+  comments: '',
+};
+
+const validationsForm = (form) =>{
+  const errors = {};
+  const regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+  const regexLastName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+  const regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
+  const regexComments = /^.{1,255}$/;
+
+
+ if(!form.name.trim()){
+    errors.name = "this field is required";
+  }else if(!regexName.test(form.name.trim())){
+    errors.name = "only letters are allowed"
+  }
+
+  if(!form.lastName.trim()){
+    errors.lastName = "this field is required";
+  }else if(!regexLastName.test(form.lastName.trim())){
+    errors.lastName = "only letters are allowed"
+  }
+
+  if(!form.email.trim()){
+    errors.email = "this field is required";
+  }else if(!regexEmail.test(form.email.trim())){
+    errors.email = "only letters are allowed"
+  }
+
+  if(!form.subject.trim()){
+    errors.subject = "this field is required";
+  }
+  if(!form.comments.trim()){
+    errors.comments = "this field is required";
+  }else if(!regexComments.test(form.comments.trim())){
+    errors.comments = "only letters are allowed"
+  } 
+
+
+  return errors;
+};
 
 
 
 export const ContactPage = () => {
 
-  const formInitialDetails = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: ''
-  }
+  const{   
+    form,
+    errors,
+    loading,
+    response,
+    handleChange,
+    handleBlur,
+    handleSubmit
+  }= useForm (initialForm, validationsForm )
 
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send');
-  const [status, setStatus] = useState({});
+  return ( 
+    <>
+    
+    <section className="contact__container"> 
 
-  const onFormUpdate = (category, value) => {
-    setFormDetails({
-      ...formDetails,
-      [category]: value
-    })
-  }
+        <article className="contact__son">
+          <div className="contact__grid">
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: 'Message sent successfully' });
-    } else {
-      setStatus({ succes: false, message: 'Something went wrong, please try again later.' });
-    }
-  };
+            <div className="contact__img">
+                {/* <img src={contactImg} alt="Contact Us" /> */}
+            </div>
 
+            <div className="contact__form">  
+              <h2>Get in touch</h2>  
+             
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={form.name}
+                  required
+                />
+                {errors.name && <p>{errors.name}</p>}
 
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Lastname"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={form.lastName}
+                  required
+                />
+                {errors.lastName && <p>{errors.lastName}</p>}
 
-  return (
-    <section>
-      <Container>
-        <Row className="align-items-center">
-          <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us" />
-              }
-            </TrackVisibility>
-          </Col>
-          <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <h2>Get In Touch</h2>
-                  <form onSubmit={handleSubmit}>
-                    <Row>
-                      <Col size={12} sm={6} className="px-1">
-                        <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
-                      </Col>
-                      <Col size={12} sm={6} className="px-1">
-                        <input type="text" value={formDetails.lastName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)} />
-                      </Col>
-                      <Col size={12} sm={6} className="px-1">
-                        <input type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} />
-                      </Col>
-                      <Col size={12} sm={6} className="px-1">
-                        <input type="tel" value={formDetails.phone} placeholder="Phone No." onChange={(e) => onFormUpdate('phone', e.target.value)} />
-                      </Col>
-                      <Col size={12} className="px-1">
-                        <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
-                        <button type="submit"><span>{buttonText}</span></button>
-                      </Col>
-                      {
-                        status.message &&
-                        <Col>
-                          <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                        </Col>
-                      }
-                    </Row>
-                  </form>
-                </div>}
-            </TrackVisibility>
-          </Col>
-        </Row>
-      </Container>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your email"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={form.email}
+                  required
+                />
+                {errors.email && <p>{errors.email}</p>}
 
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={form.subject}
+                  required
+                />
+                {errors.subject && <p>{errors.subject}</p>}
 
+                <textarea
+                  name="comments"
+                  cols="50" rows="5"
+                  placeholder="Share your comments"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={form.comments}
+                  required>
+                </textarea>
+                {errors.comments && <p>{errors.comments}</p>}
+
+                <button type="submit" value="Enviar">Send</button>
+              </form>
+              {/* {loading && <Loader />} */}
+               {/*  {response && (
+                  <Message msg="Your message has been send successfully" bgColor="#198754" />
+                )} */}
+            </div>
+          </div>
+        </article>
     </section>
+    </>
   )
 }
 
