@@ -15,7 +15,7 @@ export const ProjectCard = ({
     slogan,
 }) => {
 
-    const projectImageUrl = `/assets/projects/${ id }.jpg`;
+    const projectImageUrl = `/projects/${ id }.jpg`;
 
     const [show, setShow] = useState(false);  
     const handleClose = () => setShow(false);
