@@ -13,7 +13,6 @@ export const ProjectCard = ({
     technologies,
     additional,
     slogan,
-    // TODO:remade modal to use all data from json
 }) => {
 
     const projectImageUrl = `/assets/projects/${ id }.jpg`;
@@ -24,55 +23,7 @@ export const ProjectCard = ({
 
     return (
 
-        <>
-
-           {/*  <div className="card__container">
-                <div className="card">
-                    <h2 className='card__title'>{ name }</h2>
-                    <p>{ owner }</p>
-                    <div className="card__pic">
-                        <img src={ projectImageUrl } alt={ slogan } />
-                    </div>
-                    <ul className="project__ul">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <div className="card__social">
-                        <i className="fab fa-github"></i>
-                        <i className="fab fa-github"></i>
-                    </div>
-                
-                    <button type="submit" className='card__button' onClick={ handleShow } >
-                        open
-                    </button> 
-                </div>
-            </div> */}
-
-
-            {/* ========================================================== */}
-
-       
+        <>    
                 
             <div className="card">
 
