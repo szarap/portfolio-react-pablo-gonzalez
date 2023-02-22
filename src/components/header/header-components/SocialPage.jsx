@@ -3,7 +3,7 @@ import { BsLinkedin } from 'react-icons/bs';
 import { BsGithub } from 'react-icons/bs';
 import { SiNetlify } from 'react-icons/si';
 import { AiOutlineDownload } from 'react-icons/ai';
-import CV from "../../../../assets/Pablo_Gonzalez_EN_23.pdf";
+import CV from "../../../../assets/CV_Pablo_Gonzalez.pdf";
 
 
 

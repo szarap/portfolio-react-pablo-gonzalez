@@ -1,4 +1,11 @@
 import { SiHtml5, SiCss3, SiJavascript, SiJirasoftware, SiTrello, SiPostman, SiBootstrap, SiGithub, SiAngular, SiJava, SiMysql, SiSpringboot, SiReact, SiOracle, SiPostgresql, SiMaterialui } from 'react-icons/si';
+import Mh from '../../../assets/mindHub-1.png';
+import Ch from '../../../assets/coderHouse1.jpg';
+import Ap from '../../../assets/arg-p1.png';
+import Egg from '../../../assets/egg-1.png';
+import Utn from '../../../assets/utn.jpg';
+import Ud from '../../../assets/udemy2.png';
+
 
 export const EducationPage = () => {
 
@@ -14,7 +21,7 @@ export const EducationPage = () => {
           <div className="education__card">
             <div className="education__image">
               <div>
-                <img src='../assets/mindHub-1.png' />
+                <img src={ Mh } alt="mindhub logo"/>
               </div>
             </div>
             <div className="details details__mindhub">
@@ -34,7 +41,7 @@ export const EducationPage = () => {
           <div className="education__card">
             <div className="education__image">
               <div>
-                <img src='../assets/coderHouse1.jpg' />
+                <img src={ Ch } alt="coder house logo"/>
               </div>
             </div>
             <div className="details details__coderhouse">
@@ -56,7 +63,7 @@ export const EducationPage = () => {
           <div className="education__card">
             <div className="education__image">
               <div>
-                <img src='../assets/arg-p1.png' />
+              <img src={ Ap } alt="Argentina Programa logo"/>
               </div>
             </div>
             <div className="details details__ap">
@@ -81,7 +88,7 @@ export const EducationPage = () => {
           <div className="education__card">
             <div className="education__image">
               <div>
-                <img src='../assets/egg-1.png' />
+              <img src={ Egg } alt="Egg Cooperation logo"/>
               </div>
             </div>
             <div className="details details__egg">
@@ -106,7 +113,7 @@ export const EducationPage = () => {
           <div className="education__card">
             <div className="education__image">
               <div>
-                <img src='../assets/utn.jpg' />
+              <img src={ Utn } alt="Utn logo"/>
               </div>
             </div>
             <div className="details details__utn">
@@ -126,7 +133,7 @@ export const EducationPage = () => {
           <div className="education__card">
             <div className="education__image">
               <div>
-                <img src='../assets/udemy2.png' />
+              <img src={ Ud } alt="Utn logo"/>
               </div>
             </div>
             <div className="details details__udemy">
@@ -146,7 +153,7 @@ export const EducationPage = () => {
           <div className="education__card">
             <div className="education__image">
               <div>
-                <img src='../assets/udemy2.png' />
+              <img src={ Utn } alt="Utn logo"/>
               </div>
             </div>
             <div className="details details__udemy">
