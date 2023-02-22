@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { DownloadPage, SocialPage } from '../header/header-components';
 import { AboutPage, ContactPage, EducationPage, ProjectsPage } from './';
 
+import Logo from '../../../assets/logo.svg'
+
 
 
 export const HeaderPage = () => {
@@ -63,7 +65,7 @@ export const HeaderPage = () => {
         <section className='header__son'>
 
           <div className='img__logo'>
-            <img src="../assets/logo.svg" alt="logo" />
+            <img src={ Logo } alt="logo" />
           </div>
 
           <button className='header__logout'
