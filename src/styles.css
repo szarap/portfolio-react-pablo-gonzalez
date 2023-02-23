@@ -20,7 +20,7 @@ body{
     background: #232526;  
     background: -webkit-linear-gradient(to top, #414345, #232526);
     background: linear-gradient(to top, #414345, #232526); 
-    /* background-repeat: no-repeat;     */
+    background-repeat: no-repeat;    
     overflow-x: hidden;
     position: relative;
 }
@@ -151,6 +151,8 @@ nav {
     backdrop-filter: blur(55px); 
     backdrop-filter: color var(--color-5); 
     color: var(--color-3);
+
+    background-color: #DE002D;
 }
 
 /* ================= header */
