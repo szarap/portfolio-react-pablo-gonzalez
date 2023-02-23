@@ -160,6 +160,7 @@ header{
     max-width: 1280px;
     height: auto;
     margin-inline: auto;
+    position: relative;
 }
 .header__son{
     width:90%;
@@ -168,15 +169,13 @@ header{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    position: relative;
+    /* position: relative; */
 }
 .img__logo{
    display: inline-block;
    position: absolute; 
-   left: 0%;
-   top:6%;
-   font-size: 3rem;
-   margin:0 0.3rem 0.3rem 0;
+   left: 1%;
+   top:2%;
 }
 .header__logout{
     display:inline-block;
@@ -190,8 +189,8 @@ header{
     transition: all 0.75s;
     background: transparent;  
     position: absolute;
-    right: 0%;
-    top:6%;
+    right: 1%;
+    top:2%;
     z-index: 100;
 }
 .header__logout:hover{
@@ -212,15 +211,12 @@ header{
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     background-image: linear-gradient( to left, #000000 8%, #434343 70%, transparent 45%), url(../assets/img_header1.png);    
     background-size: 120%, 97rem;
-    background-position: center, -45% 100%;
+    background-position: end, -45% 100%;
     background-repeat: no-repeat;
-}
-.header__container:nth-child(2){
-    background-color: #6CAE3E;
 }
 .header__content{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
     justify-items: center;
@@ -240,7 +236,6 @@ header{
 .header__content__fs h3{
     font-size: 4rem;
 }
-
 .header__wrap {
     font-size: 3rem;
     font-weight: 500;
@@ -261,12 +256,14 @@ header{
     color: var(--color-5); 
     margin-bottom: 2rem; 
 }
-@media (max-width:768px) {
+
+/* 768px */
+/* @media (max-width: 768px) {
     .header__container{
         grid-template-columns: unset;
         justify-items: center;
-        background-size: 100%, 70rem;
-        background-position: center, 45% 100%;
+        background-size: 90%, 60rem;
+        background-position: center, 500% 100%;
         z-index: 110;
     }
     .header__content{
@@ -283,15 +280,47 @@ header{
         font-size: 2rem;
     }
     .header__text_container{
-        margin-left: 15rem;
+       width: 70%;
+       margin-left: 22rem;
     }
+} */
+/* 480px */
+@media (max-width: 768px) {
+    .img__logo img{
+        width: 60%;
+    }
+    .img__logo{
+        font-size: 1rem;
+    }
+    .header__container{
+        grid-template-columns: unset;
+        grid-template-rows: 20% 40% 50%;
+        justify-items: center;
+        background-image:url(../assets/img_header1.png), linear-gradient( to top, #000000 8%, #434343 70%, transparent 45%);    
+        background-size: 50rem, 100% ;
+        background-position:45% -7%, center;
+        z-index: 110;
+    }
+    .header__content{
+        grid-template-columns: unset;
+        align-content:end;
+    }
+    .header__content__fs h1{
+        font-size: 1.5rem;
+        padding-left: 5rem;
+    }
+    .header__content__fs h3{
+        font-size: 1.5rem;
+    }
+    .header__text_container{
+        width: 100%;
+        margin: 0 5rem;
+        padding-top: 13rem;
+        text-align: justify;
+     }
 }
 
-@media (max-width:768) {
-    .header__social__container{
-        top:8%;
-    }
-}
+
 
 /* ================= Social */
 .header__social__container{
@@ -368,7 +397,7 @@ header{
 .cv__container {
     display: flex;
     justify-content: center;
-    margin-top: 0%;
+    margin-top: 10rem;
 }
 .cv__container_wrapper a{
     display: flex;
@@ -408,7 +437,7 @@ header{
     align-items: center;
     justify-items: center;
     gap: 0%;
-    padding: 5rem;
+    padding:5rem 3rem; 
 }
 .about__content{
     display: grid;
@@ -419,14 +448,15 @@ header{
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     background: linear-gradient(to top, #D7DDE8, #757F9A); 
     border-radius: 3rem;
-    gap: 3rem;
-    padding: 4rem;
+    padding: 3.5rem;
 }
 .about__cards{
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
     align-items: center;
     justify-items: center;
+    padding: 0 2rem;
+
 }
 .education__article{ 
     display: flex;
@@ -472,6 +502,7 @@ header{
     background: linear-gradient(to top, #434343, #000000); 
     border-radius: 3rem;
     padding: 0.3rem;
+    margin: 0 1rem;
 }
 .about__img img{
     object-fit: cover;
@@ -705,17 +736,21 @@ header{
 .center ul li:hover {
     transform: scale(1.5);
 }
-@media (max-width: 1000px) {
+@media (max-width: 480px) {
     .education__container__grid{
-        grid-template-columns: repeat(1, 30rem);
-        column-gap: 4rem;
-        overflow-y: hidden;  
+        grid-template-columns: repeat(2, 20rem);
+        column-gap: 1rem; 
+        overflow-y: hidden;
         overflow-x: scroll;
-        scroll-snap-type: x mandatory;     
+        scroll-snap-type: x mandatory;
     }
     .education__card{
-     scroll-snap-align: center;
+        scroll-snap-align: center;
+        width: 20rem;
+        height: 35rem;
+        margin: 0;
     }
+
 }
 
 /* css icon hover */
