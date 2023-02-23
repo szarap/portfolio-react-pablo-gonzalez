@@ -22,6 +22,9 @@ export const Navbar = () => {
 
     return (
 
+    <section className="nav__container"> 
+
+   
         <nav>
             <Link
                 className="navbar-brand" to="/" >
@@ -60,6 +63,7 @@ export const Navbar = () => {
 
 
         </nav>
+    </section>
 
 
     )

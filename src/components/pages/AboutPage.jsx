@@ -16,11 +16,9 @@ export const AboutPage = () => {
             <article className='education__article'>
               <Link to="/education" className="about__card">
                 <h2>Education</h2>  
-                {/* <span>+1 Education Experience</span> */}
               </Link>
               <Link to="/projects" className="about__card">
                 <h2>Projects</h2>
-                {/* <span>+1 Build Projects</span>   */}
               </Link>
             </article>
             <p>

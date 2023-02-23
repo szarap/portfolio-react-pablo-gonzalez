@@ -76,9 +76,7 @@ export const ContactPage = () => {
         <article className="contact__son">
           <div className="contact__grid">
 
-            <div className="contact__img">
-                {/* <img src={contactImg} alt="Contact Us" /> */}
-            </div>
+            
 
             <div className="contact__form">  
               <h2>Get in touch</h2>  
@@ -146,6 +144,9 @@ export const ContactPage = () => {
                   <Message msg="Your message has been send successfully" bgColor="#198754" />
                 )} */}
             </div>
+
+                  <div className="contact__img">
+                  </div>
           </div>
         </article>
     </section>
