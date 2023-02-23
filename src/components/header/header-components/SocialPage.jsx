@@ -16,8 +16,8 @@ export const SocialPage = () => {
             <div className="social__container">
                 <Link to="https://www.linkedin.com/in/pablo-emanuel-gonzalez/" target="_blank"><BsLinkedin/></Link>
                 <Link to="https://github.com/szarap" target="_blank"><BsGithub/></Link>
-                <Link to="https://app.netlify.com/teams/szarap/overview" target="_blank"><SiNetlify/></Link>
-                <Link to={ CV }><AiOutlineDownload/></Link>
+                {/* <Link to="https://app.netlify.com/teams/szarap/overview" target="_blank"><SiNetlify/></Link> */}
+                {/* <Link to={ CV }><AiOutlineDownload/></Link> */}
                 {/* TODO: icon email to redirect to contact form in spa */}
             </div>
         </div>
