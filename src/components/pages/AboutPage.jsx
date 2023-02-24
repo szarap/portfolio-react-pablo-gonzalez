@@ -24,9 +24,11 @@ export const AboutPage = () => {
             <p>
                 In this portfolio you will have find a bit about me, like my Courses and some of the Projects that I work on, 
                 since my very first one "Whaiheke". <br />
-                Isn't all in here so you might have a look in my GitHub as well. Due to my previous career I have strong aptitude for
+                Isn't all in here so you might have a look in my GitHub as well. <br />
+                Due to my previous career I have strong aptitude for
                 team work and a natural predisposition to attend to any needs that others might have. I'm a creative,
                 organized, punctual and flexible person.
+                <br />
                 Thanks for passing by!
             </p>
 

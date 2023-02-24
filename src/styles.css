@@ -46,7 +46,6 @@ a:hover {
 img{
     max-width: 100%;
     display: block;
-    /* height: auto; */
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -161,8 +160,13 @@ header{
     max-width: 1280px;
     margin-inline: auto;
     padding-top: 3rem;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     padding-bottom: 2rem;
+}
+@media (min-width:768px) {
+    header{
+        padding-top: 5rem;
+    }
 }
 .header__son{
     width:90%;
@@ -224,6 +228,7 @@ header{
         background-position: center, -10% 40%;
         background-image: linear-gradient( to left, #000000 8%, #434343 70%, transparent 45%), url(../assets/img_header1.png);    
         grid-template-rows: 10rem 1fr;
+        margin-top: 7rem;
     }
 }
 .header__content{
@@ -270,6 +275,7 @@ header{
 @media (min-width:768px){
     .header__text{
         padding: 0 3rem;
+        font-size:2.3rem;
     }
 }
 
