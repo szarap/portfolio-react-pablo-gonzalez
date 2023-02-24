@@ -605,6 +605,11 @@ header{
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
+@media (min-width:768px) {
+    .education__container__grid{
+        grid-template-columns: repeat(7, 15rem);
+    }
+}
 .education__card {
     width: 20rem;    
     height: 28rem;
