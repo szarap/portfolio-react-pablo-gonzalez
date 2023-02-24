@@ -11,18 +11,15 @@ export const EducationPage = () => {
 
   return (
     <section className='education__container'>
-
       <h2>My Studies</h2>
 
       <article className='container__son'>
-
         <div className='education__container__grid'>
-
           <div className="education__card">
             <div className="education__image">
-              <div>
+              
                 <img src={ Mh } alt="mindhub logo"/>
-              </div>
+
             </div>
             <div className="details details__mindhub">
               <div className="center">
@@ -153,7 +150,7 @@ export const EducationPage = () => {
           <div className="education__card">
             <div className="education__image">
               <div>
-              <img src={ Utn } alt="Utn logo"/>
+              <img src={ Ud } alt="Udemy logo"/>
               </div>
             </div>
             <div className="details details__udemy">
@@ -169,8 +166,6 @@ export const EducationPage = () => {
               </div>
             </div>
           </div>
-
-
         </div>
       </article>
     </section>

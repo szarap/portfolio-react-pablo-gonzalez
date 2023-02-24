@@ -19,7 +19,6 @@ body{
     font-size: 1.6rem;
     line-height: 2;
     background: #232526;  
-    background: -webkit-linear-gradient(to top, #414345, #232526);
     background: linear-gradient(to top, #414345, #232526); 
     background-repeat: no-repeat;    
     overflow-x: hidden;
@@ -139,7 +138,7 @@ p.danger {
 nav {    
     position: fixed;
     left: -.3rem;
-    bottom: calc(50% - 22rem);
+    bottom: 12%;
     display: flex; 
     flex-direction: column; 
     text-align: center;
@@ -157,12 +156,13 @@ nav {
 
 /* ========================================================header */
 header{
-    background: linear-gradient(to top, #D7DDE8, #757F9A); 
+    background: linear-gradient(to bottom, #434343, #000000); 
     width: 100%;
     max-width: 1280px;
     margin-inline: auto;
-    padding-top: 5rem;
-    margin-top: 2rem;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
 }
 .header__son{
     width:90%;
@@ -177,7 +177,8 @@ header{
    display: inline-block;
    position: absolute; 
    left: 1%;
-   top: 2%;
+   top: 0%;
+   width: 25%;
 }
 .header__logout{
     display:inline-block;
@@ -191,70 +192,95 @@ header{
     background: transparent;  
     position: absolute;
     right: 1%;
-    top:2%;
+    top:0%;
     z-index: 100;
 }
 .header__logout:hover{
     color: var(--color-5);  
-    transform: scale(1.3);
+    transform: scale(1.1);
     transition: all 0.75s;
 }
 
 .header__container{
-    color: var(--color-6);
+    color: var(--color-6); 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 10rem 1fr;
-    margin: 0;
-    margin-top: 7.5rem;
-    margin-bottom: 3rem;
+    grid-template-rows: 5rem 1fr;
+    margin: 5rem 0;
     padding: 3rem 2rem;
     border-radius: var(--border-radius);  
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    background-image: linear-gradient( to left, #000000 8%, #434343 70%, transparent 45%), url(../assets/img_header1.png);    
-    background-size: 100%, 90rem;
-    background-position: center, 47% 30%;
+    background-image: linear-gradient( to left, #000000 8%, #434343 60%, transparent 45%), url(../assets/img_header1.png);    
+    background-size: 100%, 80rem;
+    background-position: center, 30% 82%;
     background-repeat: no-repeat;
+
+
+    background-color:var(--color-4);
 }
 @media (min-width:768px) {
     .header__container{
-        background-size: 100%, 90rem;
-        background-position: center, -35% 30%;
+        background-size: 100%, 95rem;
+        background-position: center, -10% 40%;
+        background-image: linear-gradient( to left, #000000 8%, #434343 70%, transparent 45%), url(../assets/img_header1.png);    
+        grid-template-rows: 10rem 1fr;
     }
-
 }
-
 .header__content{
     grid-column: 2/4;
-    text-align: center;
+    text-align:right;
 }
-
+@media (min-width:768px) {
+    .header__content{
+        text-align: center;
+    }
+}
 .header__content__fs h1{
     font-family: 500;
-    font-size: 4rem;
+    font-size: 1.7rem;
 }
 .header__wrap {
-    font-size: 3rem;
-    font-weight: 500;
     color: rgba(232, 124, 0, 0.75);
+    font-family: 500;
+    font-size: 1.5rem;
+}
+@media (min-width:768px) {
+    .header__wrap,
+    .header__content__fs h1{
+        font-size: 4rem;
+    }
 }
 .header__text_container{
-    grid-column: 2/4;    
+    grid-column: 2/4;  
+}
+@media (min-width:768px){
+    .header__text_container{
+        margin-top: 1rem;
+    }
 }
 .header__text{
     text-align: justify;
+    padding: 0;
+    padding-left: 3rem;
     font-weight: 600;
     text-shadow: .2rem .2rem 2rem rgba(255,255,255,0.3);
     color: var(--color-5); 
-    font-size: 1.3rem;
+    font-size: 1rem;
+}
+@media (min-width:768px){
+    .header__text{
+        padding: 0 3rem;
+    }
 }
 
 /* ========================================================Social */
 .header__social__container{
     position: absolute;
-    right: calc(50% - 15rem);
-    top: 6%;
-    width: 30rem;
+    right: calc(50% - 10rem);
+    bottom: 0%;/*  */
+    width: 20rem;
+    background-color: var(--color-1);
+    opacity: 50%;
 }
 .social__container {
     display: flex;
@@ -263,9 +289,10 @@ header{
     align-items: center;
     gap: 2rem;
     width: 100%;
+    /* background-color: #000000; */
 }
 .social__container a {
-    color: var(--color-3);
+    color: var(--color-5);
     font-size: 2.3rem;
 }
 .social__container a:hover{
@@ -277,7 +304,7 @@ header{
     content: '';
     width: 5rem;
     height: 1px;
-    background: var(--color-3);
+    background: var(--color-5);
     margin: 0 1rem;
     text-align: center;
 }
@@ -285,7 +312,7 @@ header{
     content: '';
     width: 5rem;
     height: 1px;
-    background: var(--color-3);
+    background: var(--color-5);
     margin: 0 1rem;
     text-align: center;
 }
@@ -293,25 +320,30 @@ header{
 /* ========================================================Download */
 .cv__container {
     grid-column: 2/4;
-    display: flex;
-    justify-content: center;
     margin-top: 3rem;
+    font-size: 2rem;
+    padding: 0;
+    padding-left: 3.5rem;/*  */
+}
+@media (min-width:768px){
+    .cv__container{
+        display: flex;
+        justify-content:center;
+        width: 100%;
+        padding: 0;
+        font-size: 3rem;
+    }
 }
 .cv__container_wrapper a{
-    display: flex;
-    justify-content: center;
-    width: auto;
-    height: 7rem;
-    padding: 0 1rem;
-    border: 1px solid var(--color-3-variant);
-    border-radius: 7px;
+    padding: 1rem;
+    border: 1px solid var(--color-3);
+    border-radius: var(--border-radius);
     transition: all .75s;
-    font-size: 3.5rem;    
     text-align: center;
     background: #e87c0065;
     color: var(--color-1);
     text-decoration: none;
-    z-index: 1000;
+    z-index: 100;
 }
 .cv__container_wrapper a:hover{
     width: auto;
@@ -329,10 +361,11 @@ header{
     margin-inline:auto;
     background: linear-gradient(to top, #434343, #000000); 
     height: 100%;
+    padding-bottom: 5rem;
 }
 .about__container{
     width: 90%;
-    margin: 5rem 0;
+    margin: 1rem 0;
     margin-inline: auto;
     display: grid;
     background: linear-gradient(to bottom, #D7DDE8, #757F9A); 
@@ -340,27 +373,36 @@ header{
 }
 .about__content{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1, 1fr);
     justify-content: center;
     align-items: center;
     justify-items: center;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border-radius: var(--border-radius);
     padding: 2rem 3rem;
-    column-gap: 2rem;
+    /* row-gap: 2rem; */
 }
 .about__cards{
     display: grid;
-    align-items: center;
-    justify-items: center;
+    grid-template-rows: repeat(1, 1fr);
+}
+@media (min-width:768px) {
+    .about__cards{
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 .education__article{ 
+    grid-column: 1/4;
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
     transition: all ease-in 0.85;
+    margin: 1rem;
+    gap: 2rem;
 }
+
 .about__card{
     display: flex;
     justify-content: space-around;
@@ -375,39 +417,63 @@ header{
 .about__card h2 {
     margin: 0 2rem;
 }
+@media (min-width:768px) {
+    .about__card h2{
+       font-size: 6rem;
+       margin: 2rem;
+    }
+}
+
 .about__card:hover{
-    width: 15.5rem;
     transition: all .35s;
     background-color: var(--background-dark);
     color: var(--color-4);
 }
 .about__cards p {
+    grid-column: 1/4;
     text-align:justify;
-    font-size: 1.6rem;
-    margin: 2rem 1rem 0 1rem;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    margin-bottom: 2rem;
 }
 @media (min-width:768px) {
     .about__cards p {
+        grid-column: 1/2;
         text-align:justify;
         font-size: 2.5rem;
+        padding-top: 3rem;
     }
 }
 .about__img{
-    height: auto;
-    display: grid;
-    place-items: start;
-    background: linear-gradient( transparent, var(#262626) );
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    background: linear-gradient(to top, #434343, #000000); 
+    grid-column: 1/4;
     border-radius: var(--border-radius);
-    padding: 0.3rem;
-    margin: 0 0.5rem;
 }
+.about__img img{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    background: linear-gradient( transparent, var(#262626) );
+    background: linear-gradient(to top, #434343, #000000);
+    padding: .3rem;
+}
+
+@media (min-width:768px) {
+    .about__img{
+        grid-column: 2/4;
+        width: 100%;
+        padding: 3rem;
+    }
+    .about__img img{
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        background: linear-gradient( transparent, var(#262626) );
+        background: linear-gradient(to top, #434343, #000000);
+        padding: .3rem;
+    }
+}
+
 .about__img img{
     object-fit: cover;
     border-radius: var(--border-radius);
 }
-.container__button{
+.about__button{
     width : 100% ;
     margin-top: 3rem;
     display : flex ;
@@ -507,9 +573,9 @@ header{
 /* ========================================================Education */
 .education__container{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto; 
-    background: linear-gradient(to bottom, #434343, #000000);
+    background: linear-gradient(to top, #434343, #000000);
 }
 .education__container h2{
     font-size: 3rem;
@@ -522,35 +588,25 @@ header{
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    margin-top: 2.5rem;
     justify-content: center;
 }
 .education__container__grid{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    gap: 5rem;
-    height: auto;
-    margin: 2rem auto; 
-}
-@media (min-width:768px) {
-    .education__container__grid{
-        grid-template-columns:unset;
-        grid-template-columns: repeat(3, 1fr)
-    }
+    grid-template-columns: repeat(7, 20rem);
+    column-gap: 2rem;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
 }
 .education__card {
-    width: 30rem;    
-    height: 45rem;
+    width: 20rem;    
+    height: 28rem;
     position: relative;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     background: linear-gradient(to top, #434343, #000000); 
     border-radius: var(--border-radius);    
-}
-@media (min-width:768px) {
-    .education__card{
-        width: 30rem;    
-        height: 45rem;
-    }
+    scroll-snap-align: start;
 }
 .education__image {
     position: absolute;
@@ -589,7 +645,7 @@ header{
 }
 .center {
     margin: 0 auto;
-    padding:0 2rem;
+    padding:0 1rem;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -721,7 +777,8 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
 
 /* ========================================================Project Page CSS  */ 
 .projects__container{
-    background: linear-gradient(to top, #D7DDE8, #757F9A); 
+    /* background: linear-gradient(to top, #D7DDE8, #757F9A);  */
+    background: linear-gradient(to bottom, #434343, #000000); 
     width: 100%;
     max-width: 1280px;
     margin-inline: auto;
@@ -729,8 +786,7 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
 .projects__container h2{
     font-size: 3rem;
     text-align: center;
-    padding-top: 5rem;
-    color: var(--color-3);
+    color: var(--color-5);
 }
 .project__son{
     width: 90%;
@@ -744,7 +800,7 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
+    gap: 2.5rem;
     margin: 5rem auto; 
 }
 @media (min-width:768px) {
@@ -761,7 +817,7 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
     content: '';
     display: block;
     padding-bottom: 150%;
-    padding: 75% 0;
+    /* padding: 95% 0; */
     max-width: 100%;
 }
   
@@ -828,9 +884,8 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
 .contact__container{
     width: 100%;
     max-width: 1280px;
-    background: linear-gradient(to top, #D7DDE8, #757F9A); 
+    background: linear-gradient(to bottom, #434343, #000000);
     margin-inline: auto;
-    margin-bottom:11rem;
 }
 .contact__son{
     width: 90%;
@@ -838,7 +893,10 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;  
+    margin: 0 auto;
+    padding: 6rem 0;  
+
+    height: 100%;
 }
 .contact__grid{
     width: 100%;
@@ -847,7 +905,7 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
     border-radius: var(--border-radius);
     background-color: transparent;
     background-color: var(--color-5);
-    margin: 5rem; 
+    /* margin: 5rem;  */
 }
 @media (min-width: 768px) {
     .contact__grid{

@@ -12,7 +12,6 @@ export const AboutPage = () => {
         <div className="about__content">
 
           <div className="about__cards">
-            
             <article className='education__article'>
               <Link to="/education" className="about__card">
                 <h2>Education</h2>  
@@ -21,6 +20,7 @@ export const AboutPage = () => {
                 <h2>Projects</h2>
               </Link>
             </article>
+
             <p>
                 In this portfolio you will have find a bit about me, like my Courses and some of the Projects that I work on, 
                 since my very first one "Whaiheke". <br />
@@ -29,18 +29,21 @@ export const AboutPage = () => {
                 organized, punctual and flexible person.
                 Thanks for passing by!
             </p>
-            <div className="container__button">    
-              <Link href="#" className="button" to="/contact">
-              <div className="button__line"></div>
-              <div className="button__line"></div>
-              <span className="button__text">CONTACT ME</span>
-              </Link>
+
+            <div className="about__img">
+              <img className='img'  src={ ME } alt="photo" />  
             </div>
           </div>
 
-          <div className="about__img">
-            <img className='img'  src={ ME } alt="photo" />  
+          <div className="about__button">    
+            <Link href="#" className="button" to="/contact">
+            <div className="button__line"></div>
+            <div className="button__line"></div>
+            <span className="button__text">CONTACT ME</span>
+            </Link>
           </div>
+
+          
         </div>
 
       </div>
