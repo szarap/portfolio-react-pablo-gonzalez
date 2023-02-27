@@ -4,7 +4,7 @@ export const projects = [
         'name':'Portfolio React', 
         'owner':'Pablo Gonzalez', 
         'date':'2023-02-27',
-        'link': '',
+        'link': 'https://portfolio-pg-react.netlify.app/',
         'github':'https://github.com/szarap/portfolio-react-pablo-gonzalez',
         'description':'This portfolio is made in React 16 with Yarn, Vite using Custom hooks and react Hooks',
         'technologies': 'React 16, Yarn, Vite, React Bootstrap, React Icons, React Router Dom',
