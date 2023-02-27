@@ -890,11 +890,6 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
     font-weight: 600;
     color: var(--color-5);
     margin: 0;  
-    /* padding: 0; */
-    /* position:absolute; */
-    /* left: 0; */
-    /* width: 200%; */
-    /* background-color: #CAC531; */
 }
 .card__heading{
     color: var(--color-6);
@@ -902,13 +897,6 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
     text-shadow: .2rem .2rem 2rem rgba(0,0,0,0.3);
     line-height: 1.4;
     text-decoration: none;
-  
-    /* word-spacing: 100vw; */
-    /* position: absolute; */
-    /* top: 5rem; */
-    /* left: 0; */
-    /* width: 0 200%; */
-    /* background-color: #CAC531; */
 }
 h3.card__heading:before{
     text-decoration: none;
