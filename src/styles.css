@@ -21,7 +21,7 @@ body{
     background: #232526;  
     background: linear-gradient(to top, #414345, #232526); 
     background-repeat: no-repeat;    
-    overflow-x: hidden;
+    overflow-x: none;
     position: relative;
 }
 
@@ -130,13 +130,10 @@ p.danger {
 }
 
 /* ========================================================Navbar */
-.nav__container{
-
-}
 
 nav {    
     position: fixed;
-    left: -.3rem;
+    left: 2%;/*  */
     bottom: 12%;
     display: flex; 
     flex-direction: column; 
@@ -160,7 +157,6 @@ header{
     max-width: 1280px;
     margin-inline: auto;
     padding-top: 3rem;
-    /* margin-top: 3rem; */
     padding-bottom: 2rem;
 }
 @media (min-width:768px) {
@@ -607,7 +603,12 @@ header{
 }
 @media (min-width:768px) {
     .education__container__grid{
-        grid-template-columns: repeat(7, 15rem);
+        grid-template-columns: unset;
+        grid-template-columns: repeat(5, 20rem);
+        margin-inline: auto;
+        overflow-x: hidden;
+        scroll-snap-type: none;
+        gap: 2rem;
     }
 }
 .education__card {
@@ -618,6 +619,12 @@ header{
     background: linear-gradient(to top, #434343, #000000); 
     border-radius: var(--border-radius);    
     scroll-snap-align: start;
+}
+
+@media (min-width:768px) {
+    .education__card {
+        scroll-snap-align:unset;
+    }
 }
 .education__image {
     position: absolute;
@@ -810,10 +817,15 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
 .card__grid{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
     margin: 5rem auto; 
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(6, 20rem);
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
 }
+
 @media (min-width:768px) {
     .card__grid{
         grid-template-columns: repeat(4, 1fr);
@@ -823,6 +835,8 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
     list-style: none;
     position: relative;
     border: none;
+
+    scroll-snap-align: start;
 }  
 .card:before{
     content: '';
@@ -860,10 +874,13 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
     filter: brightness(0.5) saturate(0) contrast(1.2) blur(5px);
 }
 .card__content{
-    left: 5rem;
-    padding: 4rem;
+    left: 3rem;
+    padding: 1.2rem;
     position: absolute;
     top: 0;
+    left: 0;
+    border-radius: var(--border-radius);
+    background-color: var(--color-3-variant);
 }
 .card__category{
     text-transform: uppercase;
@@ -871,21 +888,23 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
     font-weight: 600;
     color: var(--color-5);
     margin: 0;  
-    padding: 0;
-    position:absolute;
-    left: 0;
-    width: 200%;
+    /* padding: 0; */
+    /* position:absolute; */
+    /* left: 0; */
+    /* width: 200%; */
+    /* background-color: #CAC531; */
 }
 .card__heading{
     color: var(--color-6);
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-shadow: .2rem .2rem 2rem rgba(0,0,0,0.5);
     line-height: 1.4;
-    word-spacing: 100vw;
-    position: absolute;
-    top: 5rem;
-    left: 0;
-    width: 0 200%;
+    /* word-spacing: 100vw; */
+    /* position: absolute; */
+    /* top: 5rem; */
+    /* left: 0; */
+    /* width: 0 200%; */
+    /* background-color: #CAC531; */
 }
 .modal__body p{
     font-size: 1.5rem;
