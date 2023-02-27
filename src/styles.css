@@ -829,21 +829,22 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
 @media (min-width:768px) {
     .card__grid{
         grid-template-columns: repeat(4, 1fr);
+        overflow-x: hidden;
     }
 }
 .card{
     list-style: none;
     position: relative;
     border: none;
-
     scroll-snap-align: start;
+    text-decoration: none;
 }  
 .card:before{
     content: '';
     display: block;
     padding-bottom: 150%;
-    /* padding: 95% 0; */
     max-width: 100%;
+    
 }
   
 .card__background{
@@ -874,13 +875,14 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
     filter: brightness(0.5) saturate(0) contrast(1.2) blur(5px);
 }
 .card__content{
-    left: 3rem;
-    padding: 1.2rem;
+    padding: 1rem 2rem;
     position: absolute;
-    top: 0;
-    left: 0;
+    text-align: end;
+    bottom: 0%;
+    right: 1%;
     border-radius: var(--border-radius);
     background-color: var(--color-3-variant);
+    text-decoration: none;
 }
 .card__category{
     text-transform: uppercase;
@@ -897,14 +899,19 @@ background: linear-gradient(to top, #E100FF, #7F00FF);
 .card__heading{
     color: var(--color-6);
     font-size: 1.5rem;
-    text-shadow: .2rem .2rem 2rem rgba(0,0,0,0.5);
+    text-shadow: .2rem .2rem 2rem rgba(0,0,0,0.3);
     line-height: 1.4;
+    text-decoration: none;
+  
     /* word-spacing: 100vw; */
     /* position: absolute; */
     /* top: 5rem; */
     /* left: 0; */
     /* width: 0 200%; */
     /* background-color: #CAC531; */
+}
+h3.card__heading:before{
+    text-decoration: none;
 }
 .modal__body p{
     font-size: 1.5rem;
