@@ -593,7 +593,7 @@ header{
 }
 .education__container__grid{
     display: grid;
-    grid-template-columns: repeat(7, 20rem);
+    grid-template-columns: repeat(4, 20rem);
     column-gap: 2rem;
     overflow-y: hidden;
     overflow-x: scroll;
