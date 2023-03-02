@@ -214,8 +214,6 @@ header{
     background-size: 100%, 80rem;
     background-position: center, 30% 82%;
     background-repeat: no-repeat;
-
-
     background-color:var(--color-4);
 }
 @media (min-width:768px) {
@@ -381,8 +379,8 @@ header{
     justify-items: center;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border-radius: var(--border-radius);
-    padding: 2rem 3rem;
-    /* row-gap: 2rem; */
+    /* padding: 2rem 3rem; */
+    padding: 2rem;
 }
 .about__cards{
     display: grid;
@@ -548,7 +546,7 @@ header{
     height : 100% ;
     box-sizing : border-box ;
     border-radius : 30rem ;
-    border : solid 4px var(--color-3-variant) ;
+    border : solid 4px var(--color-3-variant);
 }
 .button__line:nth-child(1),
 .button__line:nth-child(1)::before{
