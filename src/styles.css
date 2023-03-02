@@ -594,7 +594,7 @@ header{
 .education__container__grid{
     display: grid;
     grid-template-columns: repeat(4, 20rem);
-    column-gap: 2rem;
+    gap: 2rem;
     overflow-y: hidden;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
